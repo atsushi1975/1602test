@@ -58,7 +58,7 @@ namespace LCD1602 {
         basic.pause(20)
         lcdコマンド送信(i2caddr, 2)
         basic.pause(2)
-        lcdコマンド送信(i2caddr, 15)
+        lcdコマンド送信(i2caddr, 12)
         basic.pause(2)
         lcdコマンド送信(i2caddr, 1)
         basic.pause(20)
