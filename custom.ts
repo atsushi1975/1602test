@@ -75,8 +75,8 @@ namespace LCD1602 {
         let data = 0
         while (j < _str.length) {
             data = _str.charCodeAt(j)
-            if (data > 65215){
-                data -= 65216
+            if (data > 65199){
+                data -= 65200
             }
             lcdデータ送信(i2caddr, _str.charCodeAt(j))
             j += 1
