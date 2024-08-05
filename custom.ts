@@ -72,11 +72,11 @@ namespace LCD1602 {
     //% block
     export function lcdprint(i2caddr: number, _str: string) {
         let j = 0
-        let data = 0
+        let data:bigint = 0
         while (j < _str.length) {
             data = _str.charCodeAt(j)
-            if (data > 95 && data < 144){
-                data += 48
+            if (data 60000){
+                data -= 65216
             }
             lcdデータ送信(i2caddr, _str.charCodeAt(j))
             j += 1
