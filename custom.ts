@@ -70,12 +70,12 @@ namespace LCD1602 {
          * @param _str describe parameter here, eg: "HelloWorld"
      */
     //% block
-    export function lcdprint(i2caddr: number, _str: string, kana: boolean) {
+    export function lcdprint(i2caddr: number, _str: string, kana: number) {
         let j = 0
         let data = 0
         while (j < _str.length) {
             data = _str.charCodeAt(j)
-            if (kana) {
+            if (kana == 1) {
                 data += 48
             }
             lcdデータ送信(i2caddr, data)
