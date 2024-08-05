@@ -76,7 +76,7 @@ namespace LCD1602 {
         while (j < _str.length) {
             data = _str.charCodeAt(j)
             if (data > 65000){
-                data -= 65196
+                data -= 65216
             }
             lcdデータ送信(i2caddr, _str.charCodeAt(j))
             j += 1
